@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment Management</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <div class="dashboard-header">
+        <h1>📅 Appointment Management System</h1>
+        <p>Book, Manage and Track Patient Appointments</p>
+    </div>
+
+    <div class="dashboard-cards">
+
+        <a href="/addappointment" class="card">
+            <h2>➕</h2>
+            <h3>Book Appointment</h3>
+            <p>Create new appointment</p>
+        </a>
+
+        <a href="/viewappointments" class="card">
+            <h2>📋</h2>
+            <h3>View Appointments</h3>
+            <p>See all scheduled appointments</p>
+        </a>
+
+        <a href="/dashboard" class="card logout-card">
+            <h2>🏠</h2>
+            <h3>Main Dashboard</h3>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

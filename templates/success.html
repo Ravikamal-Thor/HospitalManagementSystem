@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Hospital Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <div class="dashboard-header">
+
+        <h1>🏥 Hospital Management System</h1>
+
+        <p>Welcome Administrator</p>
+
+    </div>
+
+    <div class="dashboard-cards">
+
+        <a href="/patients" class="card">
+            <h2>👨‍⚕️</h2>
+            <h3>Patients</h3>
+        </a>
+
+        <a href="/doctors" class="card">
+            <h2>🩺</h2>
+            <h3>Doctors</h3>
+        </a>
+
+        <a href="/appointments" class="card">
+            <h2>📅</h2>
+            <h3>Appointments</h3>
+        </a>
+
+        <a href="/medicines" class="card">
+            <h2>💊</h2>
+            <h3>Medicines</h3>
+        </a>
+
+        <a href="/billing" class="card">
+            <h2>💳</h2>
+            <h3>Billing</h3>
+        </a>
+
+        <a href="/reports" class="card">
+            <h2>📄</h2>
+            <h3>Reports</h3>
+        </a>
+
+        <a href="/feedback" class="card">
+            <h2>💬</h2>
+            <h3>Feedback</h3>
+        </a>
+
+        <a href="/" class="card logout-card">
+            <h2>🚪</h2>
+            <h3>Logout</h3>
+        </a>
+        
+
+    </div>
+
+</div>
+
+</body>
+</html>

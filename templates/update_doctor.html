@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Doctor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h1>✏️ Update Doctor</h1>
+
+        <form action="/updatedoctorrecord" method="POST">
+
+            <label>Doctor ID</label>
+            <input type="number"
+                   name="doctor_id"
+                   required>
+
+            <label>Phone Number</label>
+            <input type="text"
+                   name="phone"
+                   pattern="[0-9]{10}"
+                   maxlength="10"
+                   required>
+
+            <label>Experience</label>
+            <input type="number"
+                   name="experience"
+                   min="0"
+                   max="50"
+                   required>
+
+            <button type="submit">
+                Update Doctor
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/doctors">
+            <button class="secondary-btn">
+                Back To Dashboard
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

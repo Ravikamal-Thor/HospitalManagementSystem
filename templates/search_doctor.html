@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Search Doctor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h1>🔍 Search Doctor</h1>
+
+        <form action="/finddoctor" method="POST">
+
+            <label>Doctor ID</label>
+
+            <input
+                type="number"
+                name="doctor_id"
+                required>
+
+            <button type="submit">
+                Search Doctor
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/doctors">
+
+            <button class="secondary-btn">
+                Back To Dashboard
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

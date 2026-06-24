@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h1>📅 Book Appointment</h1>
+
+        <form action="/addappointmentrecord" method="POST">
+
+            <!-- PATIENT DROPDOWN -->
+            <label>Select Patient</label>
+            <select name="patient_id" required>
+                {% for p in patients %}
+                <option value="{{ p.patient_id }}">
+                    {{ p.name }}
+                </option>
+                {% endfor %}
+            </select>
+
+            <!-- DOCTOR DROPDOWN -->
+            <label>Select Doctor</label>
+            <select name="doctor_id" required>
+                {% for d in doctors %}
+                <option value="{{ d.doctor_id }}">
+                    {{ d.name }}
+                </option>
+                {% endfor %}
+            </select>
+
+            <label>Date</label>
+            <input type="date" name="appointment_date" required>
+
+            <label>Time</label>
+            <input type="time" name="appointment_time" required>
+
+            <label>Reason</label>
+            <input type="text" name="reason" placeholder="e.g. Fever, Checkup" required>
+
+            <button type="submit">Book Appointment</button>
+
+        </form>
+
+        <br>
+
+        <a href="/appointments">
+            <button class="secondary-btn">Back</button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Patient Management</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <div class="dashboard-header">
+
+        <h1>👨‍⚕️ Patient Management</h1>
+
+        <p>Manage Hospital Patients</p>
+
+    </div>
+
+    <div class="dashboard-cards">
+
+        <a href="/addpatient" class="card">
+            <h2>➕</h2>
+            <h3>Add Patient</h3>
+        </a>
+
+        <a href="/viewpatients" class="card">
+            <h2>📋</h2>
+            <h3>View Patients</h3>
+        </a>
+
+        <a href="/searchpatient" class="card">
+            <h2>🔍</h2>
+            <h3>Search Patient</h3>
+        </a>
+
+        <a href="/updatepatient" class="card">
+            <h2>✏️</h2>
+            <h3>Update Patient</h3>
+        </a>
+
+        <a href="/deletepatient" class="card">
+            <h2>❌</h2>
+            <h3>Delete Patient</h3>
+        </a>
+
+        <a href="/dashboard" class="card logout-card">
+            <h2>🏠</h2>
+            <h3>Main Dashboard</h3>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Patient Details</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="result-container">
+
+    <div class="result-card">
+
+        {% if patient %}
+
+        <h1>👨‍⚕️ Patient Details</h1>
+
+        <div class="info-row">
+            <span>ID :</span>
+            <span>{{ patient[0] }}</span>
+        </div>
+
+        <div class="info-row">
+            <span>Name :</span>
+            <span>{{ patient[1] }}</span>
+        </div>
+
+        <div class="info-row">
+            <span>Age :</span>
+            <span>{{ patient[2] }}</span>
+        </div>
+
+        <div class="info-row">
+            <span>Gender :</span>
+            <span>{{ patient[3] }}</span>
+        </div>
+
+        <div class="info-row">
+            <span>Phone :</span>
+            <span>{{ patient[4] }}</span>
+        </div>
+
+        <div class="info-row">
+            <span>Disease :</span>
+            <span>{{ patient[5] }}</span>
+        </div>
+
+        <div class="info-row">
+            <span>Doctor :</span>
+            <span>{{ patient[6] }}</span>
+        </div>
+
+        {% else %}
+
+        <h1 class="not-found">
+            ❌ Patient Not Found
+        </h1>
+
+        {% endif %}
+
+        <br><br>
+
+        <a href="/searchpatient">
+            <button class="secondary-btn">
+                Search Again
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

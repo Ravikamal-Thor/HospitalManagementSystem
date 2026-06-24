@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Delete Patient</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h1>🗑 Delete Patient</h1>
+
+        <form action="/deletepatientrecord" method="POST">
+
+            <label>Patient ID</label>
+
+            <input
+                type="number"
+                name="patient_id"
+                required>
+
+            <button type="submit">
+                Delete Patient
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/patients">
+
+            <button class="secondary-btn">
+                Back To Dashboard
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Add Doctor</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h1>👨‍⚕️ Add Doctor</h1>
+
+        <form action="/savedoctor" method="POST">
+
+            <label>Doctor Name</label>
+
+            <input
+                type="text"
+                name="doctor_name"
+                pattern="[A-Za-z ]+"
+                required>
+
+            <label>Specialization</label>
+
+            <input
+                type="text"
+                name="specialization"
+                pattern="[A-Za-z ]+"
+                required>
+
+            <label>Phone Number</label>
+
+            <input
+                type="text"
+                name="phone"
+                maxlength="10"
+                pattern="[0-9]{10}"
+                required>
+
+            <label>Experience (Years)</label>
+
+            <input
+                type="number"
+                name="experience"
+                min="0"
+                max="50"
+                required>
+
+            <button type="submit">
+                Save Doctor
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/doctors">
+
+            <button class="secondary-btn">
+                Back To Dashboard
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

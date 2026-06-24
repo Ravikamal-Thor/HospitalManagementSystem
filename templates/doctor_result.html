@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Doctor Details</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="result-container">
+
+    <div class="result-card">
+
+        {% if doctor %}
+
+        <h1>👨‍⚕️ Doctor Details</h1>
+
+        <div class="info-row">
+            <span>ID</span>
+            <span>{{ doctor[0] }}</span>
+        </div>
+
+        <div class="info-row">
+            <span>Name</span>
+            <span>{{ doctor[1] }}</span>
+        </div>
+
+        <div class="info-row">
+            <span>Specialization</span>
+            <span>{{ doctor[2] }}</span>
+        </div>
+
+        <div class="info-row">
+            <span>Phone</span>
+            <span>{{ doctor[3] }}</span>
+        </div>
+
+        <div class="info-row">
+            <span>Experience</span>
+            <span>{{ doctor[4] }} Years</span>
+        </div>
+
+        {% else %}
+
+        <h1 class="not-found">
+            ❌ Doctor Not Found
+        </h1>
+
+        {% endif %}
+
+        <br>
+
+        <a href="/searchdoctor">
+
+            <button class="secondary-btn">
+                Search Again
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

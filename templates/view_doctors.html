@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>View Doctors</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="table-container">
+
+    <h1>👨‍⚕️ Doctors List</h1>
+
+    <br>
+
+    <table>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Doctor Name</th>
+            <th>Specialization</th>
+            <th>Phone Number</th>
+            <th>Experience</th>
+            <th>Joining Date</th>
+
+        </tr>
+
+        {% for doctor in doctors %}
+
+        <tr>
+
+            <td>{{ doctor[0] }}</td>
+            <td>{{ doctor[1] }}</td>
+            <td>{{ doctor[2] }}</td>
+            <td>{{ doctor[3] }}</td>
+            <td>{{ doctor[4] }} Years</td>
+            <td>{{ doctor[5] }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    <br><br>
+
+    <a href="/doctors">
+
+        <button class="secondary-btn">
+            Back To Doctor Dashboard
+        </button>
+
+    </a>
+
+</div>
+
+</body>
+</html>

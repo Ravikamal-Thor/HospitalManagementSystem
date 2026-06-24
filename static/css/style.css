@@ -1,0 +1,319 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#dbeafe,#f0fdf4);
+}
+
+.container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-card{
+    width:420px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.15);
+}
+
+.login-card h1{
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:12px;
+    background:#16a34a;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#15803d;
+}
+/* DASHBOARD */
+
+.dashboard-container{
+    padding:40px;
+}
+
+.dashboard-header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.dashboard-header h1{
+    color:#1e3a8a;
+    font-size:40px;
+}
+
+.dashboard-header p{
+    color:#666;
+    margin-top:10px;
+    font-size:18px;
+}
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    text-decoration:none;
+    color:#333;
+    padding:35px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h2{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#2563eb;
+}
+
+.logout-card h3{
+    color:red;
+}
+/* ERROR PAGE */
+
+.error-title{
+    color:#dc2626;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+button{
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+.result-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.result-card{
+    width:700px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0px 5px 20px rgba(0,0,0,0.15);
+}
+
+.info-row{
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+    border-bottom:1px solid #ddd;
+}
+
+.info-row span:first-child{
+    font-weight:bold;
+    color:#2563eb;
+}
+
+.not-found{
+    color:red;
+    text-align:center;
+}
+/* PAGE BACKGROUND */
+
+body{
+    background: linear-gradient(
+        135deg,
+        #e0f2fe,
+        #f8fafc
+    );
+}
+
+
+/* FORM CONTAINER */
+
+.form-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+.form-card{
+    width:650px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+
+.form-card h1{
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:30px;
+}
+
+
+/* INPUTS */
+
+.form-card input{
+    width:100%;
+    padding:14px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
+
+
+.form-card label{
+    font-weight:bold;
+    display:block;
+    margin-bottom:8px;
+}
+
+
+/* TABLE */
+
+.table-container{
+    width:95%;
+    margin:auto;
+    padding:40px;
+}
+
+
+.table-container h1{
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:30px;
+}
+
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+
+th{
+    background:#2563eb;
+    color:white;
+    padding:15px;
+}
+
+
+td{
+    padding:15px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+
+tr:hover{
+    background:#f3f4f6;
+}
+
+
+/* BUTTONS */
+
+button{
+    width:100%;
+    padding:14px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+
+button:hover{
+    background:#1d4ed8;
+}
+
+
+.secondary-btn{
+    background:#6b7280;
+}
+
+
+.secondary-btn:hover{
+    background:#4b5563;
+}
+
+
+/* BACK LINK */
+
+.dashboard-link{
+    display:inline-block;
+    background:#6b7280;
+    color:white;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:10px;
+}
+
+
+.dashboard-link:hover{
+    background:#4b5563;
+} 
+select{
+    width:100%;
+    padding:14px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:10px;
+}
