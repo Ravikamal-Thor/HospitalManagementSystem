@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>View Feedback</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="table-container">
+
+<h1>⭐ Patient Feedback Report</h1>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Patient Name</th>
+<th>Rating</th>
+<th>Comments</th>
+<th>Date</th>
+
+</tr>
+
+{% for feedback in feedbacks %}
+
+<tr>
+
+<td>{{ feedback[0] }}</td>
+<td>{{ feedback[1] }}</td>
+<td>{{ feedback[2] }}</td>
+<td>{{ feedback[3] }}</td>
+<td>{{ feedback[4] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/feedback"
+   class="dashboard-link">
+
+Back To Dashboard
+
+</a>
+
+</div>
+
+</body>
+</html>

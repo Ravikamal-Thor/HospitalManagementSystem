@@ -4,7 +4,7 @@
 <head>
 
 
-<title>Doctor Dashboard</title>
+<title>Reception Dashboard</title>
 
 <link rel="stylesheet"
       href="{{ url_for('static', filename='css/style.css') }}">
@@ -19,33 +19,30 @@
 
 <div class="dashboard-header">
 
-    <h1>👨‍⚕️ Doctor Dashboard</h1>
+    <h1>🧑‍💼 Reception Dashboard</h1>
 
-    <p>Doctor Access Panel</p>
+    <p>Receptionist Access Panel</p>
 
 </div>
 
 <div class="dashboard-cards">
 
-    <a href="/viewpatients" class="card">
+
+    <a href="/appointments" class="card">
+            <h2>📅</h2>
+            <h3>Appointments</h3>
+        </a>
+    <a href="/receptionviewpatients" class="card">
         <h2>📋</h2>
         <h3>View Patients</h3>
     </a>
 
-    <a href="/medicines/recommendation" class="card">
-        <h2>💊</h2>
-        <h3>Medicine Recommendation</h3>
+    <a href="/billing" class="card">
+        <h2>💰</h2>
+        <h3>Billing</h3>
     </a>
 
-    <a href="/reports" class="card">
-        <h2>📊</h2>
-        <h3>Reports</h3>
-    </a>
-
-    <a href="/feedback" class="card">
-        <h2>⭐</h2>
-        <h3>Feedback</h3>
-    </a>
+ 
 
     <a href="/logout" class="card logout-card">
         <h2>🚪</h2>

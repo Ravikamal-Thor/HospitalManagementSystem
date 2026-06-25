@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Recommended Medicines</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="table-container">
+
+    <h1>💊 Recommended Medicines</h1>
+
+    {% if medicines %}
+
+    <table>
+
+        <tr>
+            <th>Medicine Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Available Stock</th>
+        </tr>
+
+        {% for medicine in medicines %}
+
+        <tr>
+
+            <td>{{ medicine[0] }}</td>
+
+            <td>{{ medicine[1] }}</td>
+
+            <td>₹ {{ medicine[2] }}</td>
+
+            <td>{{ medicine[3] }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+    {% else %}
+
+    <h2 class="not-found">
+        No Medicines Found For This Disease
+    </h2>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/medicines/recommendation"
+       class="dashboard-link">
+
+        Search Another Disease
+
+    </a>
+
+    &nbsp;
+
+    <a href="/doctordashboard"
+       class="dashboard-link">
+
+        Medicine Dashboard
+
+    </a>
+
+</div>
+
+</body>
+</html>

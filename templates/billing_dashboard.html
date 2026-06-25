@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Billing Management</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <div class="dashboard-header">
+
+        <h1>💳 Billing Management</h1>
+
+        <p>Manage Hospital Bills Professionally</p>
+
+    </div>
+
+    <div class="dashboard-cards">
+
+        <a href="/billing/add" class="card">
+            <h2>➕</h2>
+            <h3>Generate Bill</h3>
+        </a>
+
+        <a href="/billing/view" class="card">
+            <h2>📋</h2>
+            <h3>View Bills</h3>
+        </a>
+
+        <a href="/dashboard" class="card logout-card">
+            <h2>🏠</h2>
+            <h3>Main Dashboard</h3>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

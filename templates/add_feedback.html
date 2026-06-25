@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Add Feedback</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+<div class="form-card">
+
+<h1>⭐ Patient Feedback</h1>
+
+<form action="/feedback/save"
+      method="POST">
+
+<label>Patient Name</label>
+
+<input type="text"
+       name="patient_name"
+       required>
+
+<label>Rating (1-5)</label>
+
+<select name="rating" required>
+
+<option value="">Select Rating</option>
+
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+
+</select>
+
+<label>Comments</label>
+
+<textarea
+name="comments"
+rows="5"
+style="width:100%;padding:10px;"
+required>
+</textarea>
+
+<br><br>
+
+<button type="submit">
+
+Submit Feedback
+
+</button>
+
+</form>
+
+<br>
+
+<a href="/feedback">
+
+<button class="secondary-btn">
+
+Back To Dashboard
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

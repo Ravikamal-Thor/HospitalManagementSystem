@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Billing Report</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="table-container">
+
+<h1>💰 Billing Report</h1>
+
+<table>
+
+<tr>
+
+<th>Bill ID</th>
+<th>Patient ID</th>
+<th>Patient Name</th>
+<th>Consultation</th>
+<th>Medicine</th>
+<th>Room</th>
+<th>Test</th>
+<th>Total</th>
+<th>Date</th>
+
+</tr>
+
+{% for bill in bills %}
+
+<tr>
+
+<td>{{ bill[0] }}</td>
+<td>{{ bill[1] }}</td>
+<td>{{ bill[2] }}</td>
+<td>{{ bill[3] }}</td>
+<td>{{ bill[4] }}</td>
+<td>{{ bill[5] }}</td>
+<td>{{ bill[6] }}</td>
+<td>{{ bill[7] }}</td>
+<td>{{ bill[8] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/reports"
+   class="dashboard-link">
+
+Back To Reports
+
+</a>
+
+</div>
+
+</body>
+</html>

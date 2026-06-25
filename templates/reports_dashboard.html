@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Reports Module</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <div class="dashboard-header">
+
+        <h1>📊 Reports Module</h1>
+
+        <p>Hospital Reports Management</p>
+
+    </div>
+
+    <div class="dashboard-cards">
+
+        <a href="/reports/patients" class="card">
+            <h2>🧑</h2>
+            <h3>Patient Report</h3>
+        </a>
+
+        <a href="/reports/doctors" class="card">
+            <h2>👨‍⚕️</h2>
+            <h3>Doctor Report</h3>
+        </a>
+
+
+        <a href="/dashboard" class="card logout-card">
+            <h2>🏠</h2>
+            <h3>Main Dashboard</h3>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Patient Report</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="table-container">
+
+<h1>📋 Patient Report</h1>
+
+<table>
+
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th>Phone</th>
+    <th>Disease</th>
+    <th>Doctor</th>
+</tr>
+
+{% for patient in patients %}
+
+<tr>
+
+<td>{{ patient[0] }}</td>
+<td>{{ patient[1] }}</td>
+<td>{{ patient[2] }}</td>
+<td>{{ patient[3] }}</td>
+<td>{{ patient[4] }}</td>
+<td>{{ patient[5] }}</td>
+<td>{{ patient[6] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/reports" class="dashboard-link">
+Back To Reports
+</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Medicine Recommendation</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h1>🩺 Medicine Recommendation</h1>
+
+        <form action="/show_recommended_medicines" method="POST">
+
+            <label>Select Disease</label>
+
+            <select name="disease_id" required>
+
+                <option value="">
+                    Select Disease
+                </option>
+
+                {% for disease in diseases %}
+
+                <option value="{{ disease[0] }}">
+                    {{ disease[1] }}
+                </option>
+
+                {% endfor %}
+
+            </select>
+
+            <button type="submit">
+                Show Recommended Medicines
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/doctordashboard">
+            <button class="secondary-btn">
+                Back to Medicine Dashboard
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

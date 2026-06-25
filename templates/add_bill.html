@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Generate Bill</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h1>💰 Generate Bill</h1>
+
+        <form action="/billing/save" method="POST">
+
+            <label>Patient ID</label>
+            <input type="number"
+                   name="patient_id"
+                   required>
+
+            <label>Patient Name</label>
+            <input type="text"
+                   name="patient_name"
+                   required>
+
+            <label>Consultation Fee</label>
+            <input type="number"
+                   name="consultation_fee"
+                   required>
+
+            <label>Medicine Charges</label>
+            <input type="number"
+                   name="medicine_charges"
+                   required>
+
+            <label>Room Charges</label>
+            <input type="number"
+                   name="room_charges"
+                   required>
+
+            <label>Test Charges</label>
+            <input type="number"
+                   name="test_charges"
+                   required>
+
+            <button type="submit">
+                Generate Bill
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/billing">
+            <button class="secondary-btn">
+                Back to Billing Dashboard
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

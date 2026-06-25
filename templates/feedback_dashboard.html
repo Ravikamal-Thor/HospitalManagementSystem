@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Feedback Module</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<div class="dashboard-header">
+
+<h1>⭐ Feedback Module</h1>
+
+<p>Patient Feedback Management</p>
+
+</div>
+
+<div class="dashboard-cards">
+
+<a href="/feedback/add" class="card">
+<h2>➕</h2>
+<h3>Add Feedback</h3>
+</a>
+
+<a href="/feedback/view" class="card">
+<h2>📋</h2>
+<h3>View Feedback</h3>
+</a>
+
+<a href="/dashboard" class="card logout-card">
+<h2>🏠</h2>
+<h3>Main Dashboard</h3>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

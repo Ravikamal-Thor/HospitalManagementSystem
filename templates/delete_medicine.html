@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Medicine</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <div class="form-card">
+
+        <h1>❌ Delete Medicine</h1>
+
+        <form action="/medicines/delete_record" method="POST">
+
+            <label>Medicine ID</label>
+
+            <input type="number"
+                   name="medicine_id"
+                   required>
+
+            <button type="submit">
+                Delete Medicine
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/medicines">
+            <button class="secondary-btn">
+                Back
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
