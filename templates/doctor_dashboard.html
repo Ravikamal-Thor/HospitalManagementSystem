@@ -47,6 +47,13 @@
         <h3>Feedback</h3>
     </a>
 
+    {% if session['role'] == 'admin' %}
+    <a href="/dashboard" class="card logout-card">
+        <h2>🏠</h2>
+        <h3>Main Dashboard</h3>
+    </a>
+      {% endif %}
+
     <a href="/logout" class="card logout-card">
         <h2>🚪</h2>
         <h3>Logout</h3>
