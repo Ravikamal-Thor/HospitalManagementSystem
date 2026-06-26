@@ -6,10 +6,11 @@ app = Flask(__name__)
 app.secret_key = "hospital_management_system_2026"
 
 db = mysql.connector.connect(
-    host="localhost",
+    host="reseau.proxy.rlwy.net",
     user="root",
-    password="tiger",
-    database="hospitaldb"
+    password="TiZhZCewJacxhhhzJXMmrepioEnwjrcJ",
+    database="hospitaldb",
+    port=31643
 )
 
 # ---------------- HOME ----------------
